@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dùng thử miễn phí 15 ngày. Phù hợp với nhiều lĩnh vực ngành nghề: Sản Xuất, Bán lẻ, Thương Mại, Dịch Vụ, Xây Lắp, Du Lịch, Giáo dục v.v"
+    />
+    <meta
+      name="keywords"
+      content="phần mềm ERP, phần mềm quản lý doanh nghiệp, quản trị doanh nghiệp toàn diện"
+    />
+    <link href="./build.css" rel="stylesheet" />
+    <title>Bizapps - Phần mềm quản lý doanh nghiệp toàn diện</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WW45TGT3");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- start Form-->
+    <section
+      class="flex flex-col gap-12 items-center justify-between px-[10%] py-[7%] bg-FormBackground bg-cover lg:flex-row lg:px-[15%]"
+      id="form"
+    >
+      <section
+        class="flex flex-col max-w-[606px] gap-[3rem] sm:max-w-536px lg:gap-[7rem]"
+      >
+        <p
+          class="font-bold text-[40px] leading-[50px] text-center sm:text-[50px] sm:leading-[60px] text-white lg:text-[76px] lg:leading-[76px] lg:text-start max-w-[525px]"
+        >
+          Phần Mềm Quản Lý Doanh Nghiệp
+          <span class="text-primary">Toàn Diện</span>
+        </p>
+        <div class="list-none list-outside text-white flex flex-col gap-4">
+          <p class="flex items-center gap-2">
+            <img src="./images/check-icon.png" alt="" />
+            Hơn 17 năm kinh nghiệm triển khai ERP
+          </p>
+          <li class="flex items-center gap-2">
+            <img src="./images/check-icon.png" alt="" />
+            <p>Tùy chỉnh hệ thống theo mọi nhu cầu đặc thù của doanh nghiệp</p>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="./images/check-icon.png" alt="" />
+            <p>Miễn phí 15 ngày dùng thử</p>
+          </li>
+        </div>
+      </section>
+      <section class="flex flex-col items-center gap-12 max-w-[409px]">
+        <div class="w-[172px]">
+          <img src="./images/Logo.png" alt="" />
+        </div>
+
+        <h5 class="text-white font-medium text-[26px]">
+          Đăng ký dùng thử phần mềm
+        </h5>
+        <form method="post" class="flex flex-col gap-6 w-full">
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Họ và tên"
+            class="py-3 px-4 border-[1.5px] rounded-[44px] bg-transparent text-white"
+            id="name"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="py-3 px-4 border-[1.5px] rounded-[44px] bg-transparent text-white"
+            id="email"
+          />
+          <input
+            type="text"
+            name="phone_number"
+            placeholder="Số điện thoại"
+            class="py-3 px-4 border-[1.5px] rounded-[44px] bg-transparent text-white"
+            id="phone"
+          />
+          <button
+            type="submit"
+            onclick="notification()"
+            class="bg-primary py-3 rounded-[44px] mt-4 text-white"
+            id="submit"
+          >
+            Hoàn tất đăng ký
+          </button>
+          <div id="message" class="text-white max-w-[390px]"></div>
+          <div
+            id="err_message"
+            class="text-red-500 max-w-[390px] text-center"
+          ></div>
+        </form>
+      </section>
+    </section>
+    <!-- end Form -->
+
+    <!-- Start Discount Policy -->
+    <section
+      class="flex flex-col gap-8 justify-between items-center bg-brownBackground md:flex-row xl:pr-4"
+    >
+      <div
+        class="bg-primary w-full text-center text-white flex flex-col gap-2 px-[3rem] py-[5rem] md:max-w-[384px]"
+      >
+        <span class="font-bold text-2xl"> Chính sách ưu đãi </span>
+        <span class="font-normal text-[18px]"
+          >Áp dụng đến hết tháng 4/2024</span
+        >
+      </div>
+
+      <div
+        class="flex flex-col-reverse items-center gap-4 xl:flex-row xl:gap-8"
+      >
+        <div class="text-black flex flex-col gap-2">
+          <span class="font-semibold text-2xl"> Ưu đãi 25% </span>
+          <span class="font-normal text-[18px] text-[#00000080]"
+            >Chi phí triển khai</span
+          >
+        </div>
+        <img src="./images/USD-icon.png" alt="" class="max-w-[69px]" />
+      </div>
+      <span class="bg-[#E3E3E4] w-[2px] h-[82px] hidden md:block"></span>
+      <div
+        class="flex flex-col-reverse items-center gap-4 xl:flex-row xl:gap-8"
+      >
+        <div class="text-black flex flex-col gap-2">
+          <span class="font-semibold text-2xl"> Ưu đãi 15% </span>
+          <span class="font-normal text-[18px] text-[#00000080]"
+            >Khi gia hạn dịch vụ</span
+          >
+        </div>
+        <img
+          src="./images/plus_calendar-icon.png"
+          alt=""
+          class="max-w-[69px]"
+        />
+      </div>
+      <span class="bg-[#E3E3E4] w-[2px] h-[82px] hidden md:block"></span>
+      <div
+        class="flex flex-col-reverse items-center gap-4 xl:flex-row xl:gap-8"
+      >
+        <div class="text-black flex flex-col gap-2">
+          <span class="font-semibold text-2xl"> Ưu đãi</span>
+          <span class="font-normal text-[18px] text-[#00000080]"
+            >Theo điểm thưởng</span
+          >
+        </div>
+        <img src="./images/gift-icon.png" alt="" class="max-w-[69px]" />
+      </div>
+      <span class="bg-[#E3E3E4] w-[2px] h-[82px] hidden md:block"></span>
+      <div
+        class="flex flex-col-reverse items-center gap-4 xl:flex-row xl:gap-8"
+      >
+        <div class="text-black flex flex-col gap-2">
+          <span class="font-semibold text-2xl"> Ưu đãi 1 tháng </span>
+          <span class="font-normal text-[18px] text-[#00000080]"
+            >Sử dụng dịch vụ</span
+          >
+        </div>
+        <img src="./images/calendar-icon.png" alt="" class="max-w-[69px]" />
+      </div>
+    </section>
+    <!-- End Discount Policy -->
+
+    <!-- Start why Bizzap? -->
+    <section
+      class="px-[15%] py-[15%] flex flex-col-reverse justify-between gap-6 lg:flex-row"
+    >
+      <div class="flex flex-col max-w-[625px] gap-[4rem] lg:gap-[8rem]">
+        <h1
+          class="font-bold text-[35px] leading-[50px] text-center capitalize lg:text-[56px] lg:leading-[64px]"
+        >
+          Tại sao Doanh nghiệp của bạn
+          <span class="text-primary">nên dùng BizApps</span>
+        </h1>
+        <div class="flex flex-col gap-8">
+          <div
+            class="flex flex-col-reverse items-center gap-4 bg-brownBackground p-8 sm:flex-row"
+          >
+            <p>
+              <span class="text-primary font-bold">Tối đa hóa năng suất</span>
+              của nhân viên nhờ chuẩn hóa quy trình xử lý công việc theo luồng
+              trên một hệ thống phần mềm
+            </p>
+            <img src="./images/electric-icon.png" alt="" />
+          </div>
+          <div
+            class="flex flex-col-reverse items-center gap-4 bg-brownBackground p-8 sm:flex-row lg:hidden"
+          >
+            <p>
+              <span class="text-primary font-bold"> Bảo mật thông tin </span>
+              của doanh nghiệp nhờ chức năng phân quyền giúp kiểm soát những ai
+              có thể xem và chỉnh sửa thông tin nhạy cảm
+            </p>
+            <img src="./images/fingerprint-icon.png" alt="" />
+          </div>
+          <div
+            class="flex flex-col-reverse items-center gap-4 p-8 sm:flex-row bg-primary"
+          >
+            <p class="text-white">
+              <span class="text-black font-bold">
+                Dữ liệu chính xác, thời gian thực.
+              </span>
+              Bất cứ khi nào sếp cũng có thể theo dõi tình hình hoạt động của
+              doanh nghiệp nhanh chóng.
+            </p>
+            <img src="./images/clound-icon.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div class="flex justify-center">
+          <img src="./images/infomation_explode-img.png" alt="" />
+        </div>
+        <div class="hidden lg:flex items-center gap-4 bg-brownBackground p-8">
+          <p>
+            <span class="text-primary font-bold"> Bảo mật thông tin </span>
+            của doanh nghiệp nhờ chức năng phân quyền giúp kiểm soát những ai có
+            thể xem và chỉnh sửa thông tin nhạy cảm
+          </p>
+          <img src="./images/fingerprint-icon.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- End why Bizzap? -->
+
+    <!-- Start about Bizzap -->
+    <section class="grid grid-cols-2 xl:grid-cols-4">
+      <div class="relative col-span-2 flex flex-col items-center">
+        <img src="./images/about-background.png" alt="" class="w-full" />
+        <div class="absolute w-full h-full">
+          <div
+            class="h-full flex flex-col justify-center items-center p-4 gap-8 2xl:p-0 2xl:gap-[6rem]"
+          >
+            <div
+              class="font-bold text-[40px] leading-[50px] max-w-[760px] 2xl:text-[56px] 2xl:leading-[64px] text-primary"
+            >
+              <p class="hidden xs:block">
+                BizApps
+                <span class="text-white"
+                  >- Phần mềm quản lý doanh nghiệp toàn diện với hơn 1000 Module
+                  và các tính năng ưu việt.</span
+                >
+              </p>
+              <p class="xs:hidden text-center">
+                BizApps
+                <span class="text-white font-medium text-2xl"
+                  ><br />Phần mềm quản lý doanh nghiệp toàn diện</span
+                >
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-between gap-8 lg:flex-row 2xl:gap-16"
+            >
+              <p
+                class="hidden font-normal max-w-[700px] text-lg text-white xl:max-w-[389px] md:block"
+              >
+                Với hệ thống các tính năng đa dạng được nghiên cứu và phát triển
+                bởi đội ngũ chuyên gia chuyên nghiệp, BizApps đã và đang được
+                tin cậy bởi các doanh hàng đầu Việt Nam.
+              </p>
+              <div class="flex items-center justify-center">
+                <button
+                  class="bg-white px-4 py-2 rounded-full max-w-[309px] sm:px-7 sm:py-4"
+                >
+                  <a
+                    class="font-normal text-[18px] flex items-center gap-4 sm:text-[22px]"
+                    href="#form"
+                    ><p class="">Đăng ký nhận Demo</p>
+                    <img src="./images/arrow-icon.png" alt=""
+                  /></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative col-span-2">
+        <img src="./images/module_HR-background.png" alt="" class="w-full" />
+        <div
+          class="absolute bottom-[5%] left-[10%] text-white flex flex-col xs:gap-4 xs:bottom-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm uppercase xs:text-lg"
+            >/ Module HR</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img src="./images/module_buy-background.png" alt="" class="w-full" />
+        <div
+          class="absolute bottom-[5%] left-[10%] text-white flex flex-col xs:gap-4 xs:bottom-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm uppercase xs:text-lg"
+            >/ Module mua hàng</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img src="./images/module_sell-background.png" alt="" class="w-full" />
+        <div
+          class="absolute top-[5%] left-[10%] text-white flex flex-col xs:gap-4 xs:top-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module bán hàng</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./images/module_warehouse-background.png"
+          alt=""
+          class="w-full"
+        />
+        <div
+          class="absolute top-[5%] left-[10%] text-white flex flex-col xs:gap-4 xs:top-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module KHO</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./images/module_accountant-background.png"
+          alt=""
+          class="w-full"
+        />
+        <div
+          class="absolute top-[5%] left-[10%] text-white flex flex-col xs:gap-4 xs:top-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module kế toán</span
+          >
+        </div>
+      </div>
+      <div class="relative col-span-2">
+        <img
+          src="./images/module_produce-background.png"
+          alt=""
+          class="w-full"
+        />
+        <div
+          class="absolute top-[5%] left-[5%] text-white flex flex-col xs:gap-4 xs:left-[10%] xs:top-1/2"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module Sản xuất</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img src="./images/module_CRM-background.png" alt="" class="w-full" />
+        <div
+          class="absolute bottom-[10%] left-[10%] text-black flex flex-col xs:gap-4 xs:bottom-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module CRM</span
+          >
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="./images/module_marketing-background.png"
+          alt=""
+          class="w-full"
+        />
+        <div
+          class="absolute top-[5%] left-[10%] text-black flex flex-col xs:gap-4 xs:top-[10%]"
+        >
+          <h4 class="font-medium text-xs xs:text-sm">
+            / Bizapps-Phần mềm quản lý doanh nghiệp
+          </h4>
+          <span class="font-normal text-sm xs:text-lg uppercase"
+            >/ Module Marketing</span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- End about Bizzap -->
+
+    <!-- Start aplication field -->
+    <section class="relative py-[10%] flex">
+      <div class="flex flex-col justify-center w-full items-center lg:flex-row">
+        <div
+          class="relative max-w-[70%] z-20 flex justify-center items-center lg:hidden"
+        >
+          <img src="./images/circle-img.png" alt="" />
+          <h1
+            class="font-bold text-[35px] leading-[50px] capitalize w-[250px] absolute text-center xs:text-[50px]"
+          >
+            <span class="text-primary">Lĩnh vực</span>
+            áp dụng
+          </h1>
+        </div>
+
+        <div
+          class="grid grid-cols-1 pb-8 flex-col h-full justify-between gap-8 xl:gap-0 md:grid-cols-2 lg:flex lg:pb-0"
+        >
+          <div class="flex items-center relative lg:-top-8 lg:left-[9.3rem]">
+            <div
+              href=""
+              class="flex gap-4 bg-brownBackground px-5 py-2 rounded-full items-center w-[320px]"
+            >
+              <img src="./images/produce-icon.png" alt="" />
+              <a class="font-normal text-lg">Sản xuất</a>
+            </div>
+          </div>
+
+          <div class="flex items-center relative lg:-top-3 lg:left-[1.3rem]">
+            <div
+              href=""
+              class="flex gap-4 bg-brownBackground px-5 py-2 rounded-full items-center w-[320px]"
+            >
+              <img src="./images/commerce-icon.png" alt="" />
+              <a class="font-normal text-lg">Thương mại</a>
+            </div>
+          </div>
+          <div class="flex items-center relative lg:left-4">
+            <div
+              href=""
+              class="flex gap-4 bg-brownBackground px-5 py-2 rounded-full items-center w-[320px]"
+            >
+              <img src="./images/service-icon.png" alt="" />
+              <a class="font-normal text-lg">Dịch vụ</a>
+            </div>
+          </div>
+          <div class="flex items-center relative lg:-bottom-3 lg:left-[1.3rem]">
+            <div
+              href=""
+              class="flex gap-4 bg-brownBackground px-5 py-2 rounded-full items-center w-[320px]"
+            >
+              <img src="./images/build-icon.png" alt="" />
+              <a class="font-normal text-lg">Xây dựng</a>
+            </div>
+          </div>
+
+          <div class="flex items-center relative lg:-bottom-8 lg:left-[9.3rem]">
+            <div
+              href=""
+              class="flex gap-4 bg-brownBackground px-5 py-2 rounded-full items-center w-[320px]"
+            >
+              <img src="./images/health_care-icon.png" alt="" />
+              <a class="font-normal text-lg">Chăm sóc sức khỏe</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden flex-col justify-between h-full relative xl:flex">
+          <img
+            src="./images/line_left1-icon.png"
+            alt=""
+            class="max-w-[75px] relative left-[9rem]"
+          />
+          <img
+            src="./images/line_left2-icon.png"
+            alt=""
+            class="relative left-4"
+          />
+          <img
+            src="./images/line_left3-icon.png"
+            alt=""
+            class="relative left-3"
+          />
+          <img
+            src="./images/line_left4-icon.png"
+            alt=""
+            class="relative left-4"
+          />
+          <img
+            src="./images/line_left5-icon.png"
+            alt=""
+            class="max-w-[75px] relative left-[9rem]"
+          />
+        </div>
+        <div class="hidden relative z-20 lg:block">
+          <img src="./images/circle-img.png" alt="" />
+          <h1
+            class="font-bold text-[56px] leading-[64px] capitalize w-[300px] absolute text-center top-1/3 left-[15%]"
+          >
+            <span class="text-primary">Lĩnh vực</span>
+            áp dụng
+          </h1>
+        </div>
+        <div
+          class="hidden flex-col justify-between h-full relative z-10 xl:flex"
+        >
+          <img
+            src="./images/line_right1-icon.png"
+            alt=""
+            class="max-w-[75px] relative right-[5rem]"
+          />
+          <img
+            src="./images/line_right2-icon.png"
+            alt=""
+            class="relative right-4"
+          />
+          <img
+            src="./images/line_right3-icon.png"
+            alt=""
+            class="relative right-3"
+          />
+          <img
+            src="./images/line_right4-icon.png"
+            alt=""
+            class="relative right-4"
+          />
+          <img
+            src="./images/line_right5-icon.png"
+            alt=""
+            class="max-w-[75px] relative right-[5rem]"
+          />
+        </div>
+        <div
+          class="grid grid-cols-1 flex-col justify-between gap-8 h-full xl:gap-0 md:grid-cols-2 lg:flex"
+        >
+          <div class="flex items-center relative lg:-top-8 lg:right-[8.7rem]">
+            <div
+              href=""
+              class="flex flex-row-reverse justify-end gap-4 bg-brownBackground px-4 py-2 rounded-full items-center w-[320px] lg:flex-row lg:justify-between"
+            >
+              <a class="font-normal text-lg pl-8">Du lịch</a>
+              <img src="./images/travel-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="flex items-center relative lg:-top-3 lg:right-[1.3rem]">
+            <div
+              href=""
+              class="flex flex-row-reverse justify-end gap-4 bg-brownBackground px-4 py-2 rounded-full items-center w-[320px] lg:flex-row lg:justify-between"
+            >
+              <a class="font-normal text-lg pl-8">Cho thuê</a>
+              <img src="./images/rental-icon.png" alt="" />
+            </div>
+          </div>
+          <div class="flex items-center relative lg:right-4">
+            <div
+              href=""
+              class="flex flex-row-reverse justify-end gap-4 bg-brownBackground px-2 py-2 rounded-full items-center w-[320px] lg:flex-row lg:justify-between"
+            >
+              <a class="font-normal text-lg pl-8">Quản lý văn phòng luật</a>
+              <img src="./images/law_office-icon.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="flex items-center relative lg:-bottom-3 lg:right-[1.3rem]"
+          >
+            <div
+              href=""
+              class="flex flex-row-reverse justify-end gap-4 bg-brownBackground px-2 py-2 rounded-full items-center w-[320px] lg:flex-row lg:justify-between"
+            >
+              <a class="font-normal text-lg pl-8">Giáo dục</a>
+              <img src="./images/education-icon.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="flex items-center relative lg:-bottom-8 lg:right-[8.7rem]"
+          >
+            <div
+              href=""
+              class="flex flex-row-reverse justify-end gap-4 bg-brownBackground px-2 py-2 rounded-full items-center w-[320px] lg:flex-row lg:justify-between"
+            >
+              <a class="font-normal text-lg pl-8">Y tế</a>
+              <img src="./images/medical-icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End aplication field -->
+
+    <!-- Start customer -->
+    <section
+      class="px-[10%] py-[10%] bg-CustomerBackground bg-no-repeat bg-center bg-cover grid grid-cols-1 gap-8 lg:px-[15%] lg:grid-cols-2"
+    >
+      <div class="grid grid-rows-4 gap-5 md:gap-10 lg:gap-20">
+        <div class="flex flex-col gap-5 md:gap-10 lg:gap-20">
+          <p
+            class="font-bold text-[45px] leading-[50px] text-black max-w-[612px] sm:text-[56px] sm:leading-[64px]"
+          >
+            <span class="text-primary">Khách hàng</span> của BizApps
+          </p>
+
+          <p class="font-normal text-lg text-black">
+            Được tin cậy bởi các doanh nghiệp hàng đầu Việt Nam
+          </p>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">thương mại</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/commerce1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/commerce2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/commerce3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/commerce4-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/commerce5-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">chăm sóc cá nhân</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/health1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/health2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/health3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/health4-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">cho thuê</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/rental1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/rental2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/rental3-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-rows-4 gap-20">
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">sản xuất</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/produce1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/produce2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/produce3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/produce4-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/produce5-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">du lịch</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/travel1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/travel2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/travel3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/travel4-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">luật</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/law1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/law2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/law3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/law4-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <p class="uppercase font-semibold text-base">
+            / BIZAPPS . Khách hàng /
+            <span class="text-primary font-bold">lĩnh vực khác</span>
+          </p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/other1-logo.png" alt="" />
+            </div>
+
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/other2-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/other3-logo.png" alt="" />
+            </div>
+            <div class="border-[20px] border-white bg-white">
+              <img src="./images/logo/other4-logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End customer -->
+
+    <!-- Start feedback -->
+    <section
+      class="px-[10%] py-[5%] flex flex-col items-center gap-16 lg:gap-32 lg:px-[15%] lg:py-[10%]"
+    >
+      <p
+        class="font-bold text-[35px] leading-[40px] text-center text-black max-w-[840px] md:text-[45px] md:leading-[55px] lg:text-[56px] lg:leading-[64px]"
+      >
+        <span class="text-primary">Phản hồi</span>
+        từ những doanh nghiệp đã triển khai thành công với BizApps
+      </p>
+
+      <div class="grid grid-cols-1 gap-16 md:grid-cols-3">
+        <div
+          class="flex flex-col items-center gap-16 justify-between max-w-[380px]"
+        >
+          <div class="flex flex-col items-center gap-8">
+            <img src="./images/logo/produce1-logo.png" alt="" />
+            <p class="text-[22px] leading-[45px] font-bold text-center">
+              "Tính linh hoạt và tùy chỉnh của BizApps đã làm thay đổi trò chơi
+              cho doanh nghiệp của chúng tôi. Nó thực sự được tùy chỉnh cho nhu
+              cầu cụ thể của chúng tôi. "
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-6">
+            <img src="./images/feedback1-img.png" alt="" />
+            <p class="font-bold text-[17px] text-center">
+              Quản lý dự án
+              <br />
+              <span class="font-normal text-[15px]">
+                Công ty TNHH Kỹ Thuật Công Nghệ Nam Sơn
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-between max-w-[380px]">
+          <div class="flex flex-col items-center gap-8">
+            <img src="./images/logo/commerce1-logo.png" alt="" />
+            <p class="text-[22px] leading-[45px] font-bold text-center">
+              "BizApps đã thay đổi cách chúng tôi hoạt động. Nó đơn giản hóa quy
+              trình và tăng hiệu suất toàn diện. "
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-6">
+            <img src="./images/feedback2-img.png" alt="" />
+            <p class="font-bold text-[17px] text-center">
+              Kế toán trưởng <br /><span class="font-normal text-[15px]"
+                >Công ty Cổ Phần Lốp Xe Việt</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-between max-w-[380px]">
+          <div class="flex flex-col items-center gap-8">
+            <img src="./images/logo/produce3-logo.png" alt="" />
+            <p class="text-[22px] leading-[45px] font-bold text-center">
+              "Hệ thống hiện đại với các tính năng theo xu hướng mới nhất. Điều
+              đó giúp Vivita tiếp cận đơn giản và dễ dàng."
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center gap-6">
+            <img src="./images/feedback3-img.png" alt="" />
+            <p class="font-bold text-[17px] text-center">
+              CEO <br /><span class="font-normal text-[15px]">
+                Công Ty TNHH Siêu Thị Sống Khỏe - Vivita
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End feedback -->
+
+    <!-- Start contact -->
+    <section class="grid grid-cols-1 xl:grid-cols-2">
+      <div
+        class="bg-primary p-[5%] flex flex-col items-center justify-center gap-20 xl:pl-[15%] xl:items-start xl:p-0"
+      >
+        <p
+          class="text-[35px] leading-[50px] text-center text-white uppercase max-w-[675px] md:text-[48px] md:leading-[62px] xl:text-start"
+        >
+          Quản lý doanh nghiệp hiệu quả hơn với
+          <span class="text-[#E2F500]">BizApps</span> Bạn đã sẵn sàng?
+        </p>
+
+        <button
+          class="bg-white px-4 py-2 rounded-full max-w-[309px] sm:px-7 sm:py-4"
+        >
+          <a
+            class="font-normal text-[18px] flex items-center gap-4 sm:text-[22px]"
+            href="#form"
+            ><p class="">Đăng ký nhận Demo</p>
+            <img src="./images/arrow-icon.png" alt=""
+          /></a>
+        </button>
+        <p class="uppercase text-white">
+          / Hoặc liên hệ: số máy bàn
+          <span class="text-[#E2F500]">028 3715 0781 -</span> số di động
+          <span class="text-[#E2F500]">096 687 4448</span>
+        </p>
+      </div>
+
+      <img
+        src="./images/contact-img.png"
+        alt=""
+        class="w-full h-full hidden xl:block"
+      />
+    </section>
+    <!-- End contact -->
+
+    <!-- Start footer -->
+    <footer class="flex flex-col bg-footerbg px-[10%] py-[5%] gap-16">
+      <div class="flex flex-col justify-between gap-12 xl:flex-row">
+        <div class="flex flex-col gap-12 xl:max-w-[390px]">
+          <img
+            src="./images/Logo.png"
+            alt=""
+            class="max-w-[140px]"
+            title="CÔNG TY TNHH PHẦN MỀM BIZAPPS"
+          />
+          <div
+            class="text-white font-medium text-[15px] leading-[26px] grid grid-cols-1 flex-col gap-6 sm:grid-cols-2 xl:flex"
+          >
+            <li class="flex items-center gap-4">
+              <img src="./images/location-icon.png" alt="" />
+              <p>
+                Tầng 9, Tòa nhà HOSE, Công viên phần mềm Quang Trung, Quận 12,
+                TP Hồ Chí Minh
+              </p>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="./images/phone-icon.png" alt="" />
+              <p>
+                028 37 15 07 81 <br /><span class="text-[#AAB4C3]"
+                  >Tổng đài hỗ trợ hoạt động từ 8h00 đến 18h00 hàng ngày, 6 ngày
+                  trong tuần
+                </span>
+              </p>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="./images/phone_plus-icon.png" alt="" />
+              <p>
+                0869 233 290 <br />
+                <span class="text-[#AAB4C3]">Tổng đài hỗ trợ ngoài giờ</span>
+              </p>
+            </li>
+            <li class="flex items-center gap-4">
+              <img src="./images/mail-icon.png" alt="" />
+              <p>support@bizapps.vn</p>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="./images/building-icon.png" alt="" />
+              <p>
+                Mã số doanh nghiệp: 02199231065 <br />
+                <span class="text-[#AAB4C3]"
+                  >Được cấp bởi Sở Kế Hoạch và Đầu Tư TP Hồ Chí Minh</span
+                >
+              </p>
+            </li>
+          </div>
+          <a href="http://online.gov.vn/Home/WebDetails/110912"
+            ><img
+              src="./images/bocongthuong-img.png"
+              alt=""
+              class="max-w-[192px]"
+          /></a>
+        </div>
+        <div
+          class="grid grid-cols-1 justify-center gap-5 md:grid-cols-3 lg:gap-20"
+        >
+          <div class="flex gap-15 justify-between md:flex-col">
+            <div class="text-white flex flex-col gap-5 xs:gap-12">
+              <div class="text-lg font-bold">
+                <p>Về chúng tôi</p>
+                <div class="h-[3px] max-w-[30px] bg-primary mt-2"></div>
+              </div>
+              <div
+                class="text-[15px] font-medium text-[#AAB4C3] flex flex-col gap-6"
+              >
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/gioi-thieu"
+                    class="hover:text-primary"
+                    >Giới thiệu</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/bang-gia"
+                    class="hover:text-primary"
+                    >Bảng giá</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/khach-hang-cua-chung-toi"
+                    class="hover:text-primary"
+                    >Khách hàng</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/tuyen-dung"
+                    class="hover:text-primary"
+                    >Tuyển dụng</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/contactus"
+                    class="hover:text-primary"
+                    >Liên hệ</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="text-white flex flex-col gap-5 xs:gap-12">
+                <div class="text-lg font-bold">
+                  <p>Đối tác</p>
+                  <div class="h-[3px] max-w-[30px] bg-primary mt-2"></div>
+                </div>
+                <div
+                  class="text-[15px] font-medium text-[#AAB4C3] flex flex-col gap-6"
+                >
+                  <div>
+                    <a
+                      href="https://bizapps.vn/page/hop-tac/"
+                      class="hover:text-primary"
+                      >Lời mời hợp tác</a
+                    >
+                  </div>
+                  <div>
+                    <a
+                      href="https://bizapps.vn/page/hop-tac/"
+                      class="hover:text-primary"
+                      >Tìm đối tác</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between md:flex-col">
+            <div class="text-white flex flex-col gap-12 xs:hidden">
+              <div class="text-lg font-bold">
+                <p>Chính sách</p>
+                <div class="h-[3px] max-w-[30px] bg-primary mt-2"></div>
+              </div>
+              <div
+                class="text-[15px] font-medium text-[#AAB4C3] flex flex-col gap-6"
+              >
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/dieu-khoan-su-dung"
+                    class="hover:text-primary"
+                    >Điều khoản sử dụng</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/chinh-sach-quyen-rieng-tu"
+                    class="hover:text-primary"
+                    >Chính sách quyền riêng tư</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/chinh-sach-ho-tro"
+                    class="hover:text-primary"
+                    >Chính sách hỗ trợ</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/bao-mat"
+                    class="hover:text-primary"
+                    >Bảo mật & An toàn dữ liệu</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/thanh-toan"
+                    class="hover:text-primary"
+                    >Thanh toán</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/tinh-phi-bizapps"
+                    class="hover:text-primary"
+                    >Cách tính phí Bizapps</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/thoa-thuan-bizapps"
+                    class="hover:text-primary"
+                    >Thỏa thuận cung cấp Bizapps</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/quy-dinh-hoi-dap"
+                    class="hover:text-primary"
+                    >Quy định về diễn đàn và hỏi đáp</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="text-white flex flex-col gap-5 xs:gap-12">
+              <div class="text-lg font-bold">
+                <p>Trợ giúp</p>
+                <div class="h-[3px] max-w-[30px] bg-primary mt-2"></div>
+              </div>
+              <div
+                class="text-[15px] font-medium text-[#AAB4C3] flex flex-col gap-6"
+              >
+                <div>
+                  <a
+                    href="https://bizapps.vn/forum/tro-giup-1"
+                    class="hover:text-primary"
+                    >Trợ giúp</a
+                  >
+                </div>
+
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/huong-dan/"
+                    class="hover:text-primary"
+                    >Tài liệu hướng dẫn</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://www.youtube.com/channel/UCnDZdC8pikbQZDcQ6K5tyVw"
+                    class="hover:text-primary"
+                    >Videos</a
+                  >
+                </div>
+                <div>
+                  <a href="https://bizapps.vn/blog" class="hover:text-primary"
+                    >Chia sẻ</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="text-white hidden flex-col gap-6 xs:flex">
+              <div class="text-lg font-bold">
+                <p>Mobile app</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="flex gap-2 bg-[#253C5E] rounded-lg max-w-[180px] hover:bg-primary"
+                >
+                  <a
+                    href="https://apps.apple.com/us/app/bizapps-app/id6446337978"
+                    class="flex gap-2 px-4 py-2"
+                    ><img
+                      src="./images/apple-icon.png"
+                      alt=""
+                      class="max-w-[27px]"
+                    />
+                    <p class="text-xs font-semibold text-center">
+                      Download on the<br />
+                      <span class="text-lg">Apple Store</span>
+                    </p></a
+                  >
+                </div>
+                <div
+                  class="flex gap-2 bg-[#253C5E] rounded-lg max-w-[180px] hover:bg-primary"
+                >
+                  <a
+                    href="https://play.google.com/store/apps/details?id=vn.bizapps.app"
+                    class="flex gap-2 px-4 py-2"
+                    ><img
+                      src="./images/gg_play-icon.png"
+                      alt=""
+                      class="max-w-[27px]"
+                    />
+                    <p class="text-xs font-semibold text-center">
+                      Download on the<br />
+                      <span class="text-lg">Google Play</span>
+                    </p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-5 justify-between xs:gap-12 md:flex-col">
+            <div class="text-white flex-col gap-12 hidden xs:flex">
+              <div class="text-lg font-bold">
+                <p>Chính sách</p>
+                <div class="h-[3px] max-w-[30px] bg-primary mt-2"></div>
+              </div>
+              <div
+                class="text-[15px] font-medium text-[#AAB4C3] flex flex-col gap-6"
+              >
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/dieu-khoan-su-dung"
+                    class="hover:text-primary"
+                    >Điều khoản sử dụng</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/chinh-sach-quyen-rieng-tu"
+                    class="hover:text-primary"
+                    >Chính sách quyền riêng tư</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/chinh-sach-ho-tro"
+                    class="hover:text-primary"
+                    >Chính sách hỗ trợ</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/bao-mat"
+                    class="hover:text-primary"
+                    >Bảo mật & An toàn dữ liệu</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/thanh-toan"
+                    class="hover:text-primary"
+                    >Thanh toán</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/tinh-phi-bizapps"
+                    class="hover:text-primary"
+                    >Cách tính phí Bizapps</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/thoa-thuan-bizapps"
+                    class="hover:text-primary"
+                    >Thỏa thuận cung cấp Bizapps</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="https://bizapps.vn/page/quy-dinh-hoi-dap"
+                    class="hover:text-primary"
+                    >Quy định về diễn đàn và hỏi đáp</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="hidden flex-col text-white gap-4 xs:flex">
+              <p class="text-base font-bold">Theo dõi chúng tôi</p>
+              <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
+                <a href="https://www.facebook.com/bizappsvn"
+                  ><img
+                    src="./images/facebook-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a href="https://www.linkedin.com/company/bizapps-vietnam/"
+                  ><img
+                    src="./images/linkedin-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a href="https://twitter.com/bizappscompany/"
+                  ><img
+                    src="./images/twitter-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a href="https://www.youtube.com/@BizApps"
+                  ><img
+                    src="./images/youtube-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-4 xs:hidden">
+            <div class="text-white flex flex-col gap-6x">
+              <div class="text-lg font-bold mb-2 text-center">
+                <p>Mobile app</p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <div
+                  class="flex gap-2 bg-[#253C5E] rounded-lg max-w-[180px] hover:bg-primary"
+                >
+                  <a
+                    href="https://apps.apple.com/us/app/bizapps-app/id6446337978"
+                    class="flex gap-2 px-4 py-2"
+                    ><img
+                      src="./images/apple-icon.png"
+                      alt=""
+                      class="max-w-[27px]"
+                    />
+                    <p class="text-xs font-semibold text-center">
+                      Download on the<br />
+                      <span class="text-lg">Apple Store</span>
+                    </p></a
+                  >
+                </div>
+                <div
+                  class="flex gap-2 bg-[#253C5E] rounded-lg max-w-[180px] hover:bg-primary"
+                >
+                  <a
+                    href="https://play.google.com/store/apps/details?id=vn.bizapps.app"
+                    class="flex gap-2 px-4 py-2"
+                    ><img
+                      src="./images/gg_play-icon.png"
+                      alt=""
+                      class="max-w-[27px]"
+                    />
+                    <p class="text-xs font-semibold text-center">
+                      Download on the<br />
+                      <span class="text-lg">Google Play</span>
+                    </p></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col text-white gap-4">
+              <p class="text-base font-bold">Theo dõi chúng tôi</p>
+              <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
+                <a href="#" class="flex justify-center"
+                  ><img
+                    src="./images/facebook-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a
+                  href="https://www.linkedin.com/company/bizapps-vietnam/"
+                  class="flex justify-center"
+                  ><img
+                    src="./images/linkedin-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a
+                  href="https://twitter.com/bizappscompany/"
+                  class="flex justify-center"
+                  ><img
+                    src="./images/twitter-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+                <a
+                  href="https://www.youtube.com/@BizApps"
+                  class="flex justify-center"
+                  ><img
+                    src="./images/youtube-icon.svg"
+                    alt=""
+                    class="max-w-[34px] hover:bg-primary hover:shadow-[0_0_5px_5px_rgba(109,113,46,1)] hover:rounded-full"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <hr class="h-[2px] bg-[#1E3049]" />
+        <p class="text-white text-[15px] font-normal mt-8">
+          BizApps là thương hiệu thuộc sở hữu của
+          <span class="text-primary">Công Ty Cổ Phần Công Nghệ BizApps</span>
+        </p>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <script>
+      function notification() {
+        document.getElementById("notification").innerHTML =
+          "Cám ơn bạn! Chuyên viên tư vấn của chúng tôi sẽ liên hệ với bạn để trao đổi chi tiết hơn trong thời gian sớm nhất.";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const submit = document.getElementById("submit");
+        const message = document.getElementById("message");
+        const err_message = document.getElementById("err_message");
+        submit.addEventListener("click", (e) => {
+          e.preventDefault();
+          const data = {
+            name: name.value,
+            email: email.value,
+            phone: phone.value,
+          };
+          if (name.value == "" || email.value == "" || phone.value == "") {
+            err_message.innerHTML = "Bạn chưa nhập đủ thông tin";
+          } else {
+            postGoogle(data);
+            name.value = "";
+            email.value = "";
+            phone.value = "";
+            message.innerHTML =
+              "Cám ơn bạn! Chuyên viên tư vấn của chúng tôi sẽ liên hệ với bạn để trao đổi chi tiết hơn trong thời gian sớm nhất.";
+          }
+        });
+      });
+      async function postGoogle(data) {
+        const fomrURL =
+          "https://docs.google.com/forms/d/e/1FAIpQLSdQU-baxMaABYnPX7mMjqZXqcb7Gqou6SbRmCtF6ESF8_UgaA/formResponse";
+        const formData = new FormData();
+        formData.append("entry.839632658", data.name);
+        formData.append("entry.928685347", data.email);
+        formData.append("entry.1921686249", data.phone);
+        await fetch(fomrURL, {
+          method: "POST",
+          body: formData,
+        });
+      }
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WW45TGT3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>
